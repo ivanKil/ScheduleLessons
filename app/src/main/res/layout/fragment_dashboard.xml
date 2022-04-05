@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.MarkersFragment">
+    android:background="@color/black"
+    tools:context=".ui.dashboard.ScheduleFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginBottom="?actionBarSize"
         android:id="@+id/markers_recyclerview"
         android:layout_width="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

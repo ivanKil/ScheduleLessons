@@ -15,10 +15,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/left_panel"
-            android:layout_height="wrap_content"
-            android:background="@drawable/lesson_left_panel"
-            app:layout_constraintWidth_percent=".80"
-            android:layout_width="0dp"
+            android:layout_height="@dimen/height_addLesson"
+            android:background="@drawable/tablo_panel"
+            android:layout_width="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -57,43 +56,6 @@
                 tools:text="08:00 - 10:15"></TextView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/right_panel"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/lesson_right_panel"
-            app:layout_constraintBottom_toBottomOf="@id/left_panel"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/left_panel"
-            app:layout_constraintTop_toTopOf="@id/left_panel"
-            app:layout_constraintWidth_percent=".20">
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:rotation="90"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/openin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/call"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/lesson_videocam"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_baseline_videocam_24" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
 

@@ -1,52 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.HomeFragment">
 
-    >
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_height="match_parent"
+        android:id="@+id/tablo"
         android:layout_width="match_parent"
-        android:layout_marginBottom="60dp"
-        android:id="@+id/gm">
+        android:layout_height="0dp"
+        android:background="@drawable/tablo_panel"
+        app:layout_constraintVertical_weight="0.4"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/title_size"
+        android:paddingBottom="@dimen/title_size"
+        android:paddingTop="@dimen/title_size">
 
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/are_you_ready"
+            android:gravity="center"
+            android:textSize="@dimen/title_size"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/are_you_ready"
+            android:paddingBottom="@dimen/small_size"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/digits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="8"
+            android:layout_marginLeft="@dimen/digit_size"
+            android:layout_marginRight="@dimen/digit_size"
+            app:layout_constraintTop_toBottomOf="@id/are_you_ready">
+
+            <TextView
+                style="@style/digitTextviewStyle"
+                android:id="@+id/digit1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/digit2"
+                style="@style/digitTextviewStyle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="0" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="@dimen/digit_size" />
+
+            <TextView
+                android:id="@+id/digit3"
+                style="@style/digitTextviewStyle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/digit4"
+                style="@style/digitTextviewStyle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="0" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="@dimen/digit_size" />
+
+            <TextView
+                android:id="@+id/digit5"
+                style="@style/digitTextviewStyle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="0" />
+
+            <TextView
+                style="@style/digitTextviewStyle"
+                android:id="@+id/digit6"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:layout_marginLeft="@dimen/title_size"
+            android:layout_marginRight="@dimen/title_size"
+            app:layout_constraintTop_toBottomOf="@id/digits">
+
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/days"
+                android:textSize="@dimen/small_size" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/hours"
+                android:textSize="@dimen/small_size" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/minutes"
+                android:textSize="@dimen/small_size" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-   <!--<androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/plus"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:alpha="0.4"
-        android:textSize="40sp"
-        android:text="+"/>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/minus"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/plus"
-        android:alpha="0.4"
-        android:textSize="40sp"
-        android:text="-"/>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/my_position"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/minus"
-        android:alpha="0.4"
-        android:textSize="40sp"
-        android:text="Я"/>-->
 
-    <!--<fragment
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:id="@+id/map"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lessons_field"
+        app:layout_constraintTop_toBottomOf="@id/tablo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />-->
+        app:layout_constraintHeight_percent=".35"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/lessons_title"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_size"
+            android:textColor="@color/white"
+            android:text="@string/lessons" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@id/lessons_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/lessons_recyclerview"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:layout_height="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/lessons_field"
+        android:layout_width="match_parent"
+        app:layout_constraintHeight_percent=".35"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/homeworks_title"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_size"
+            android:textColor="@color/white"
+            android:text="@string/homeworks" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@id/homeworks_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/homeworks_recyclerview"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

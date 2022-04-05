@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Exam</string>
     <string name="title_home">Главная</string>
-    <string name="title_markers">Уроки</string>
+    <string name="lessons">Уроки</string>
     <string name="title_notifications">Notifications</string>
     <string name="default_info_title">default_info_title</string>
     <string name="default_info_snippet">default_info_snippet</string>
@@ -10,4 +10,11 @@
     <string name="marker_info">Информация о маркере</string>
     <string name="ok">Сохранить</string>
     <string name="cancel">Отмена</string>
+    <string name="are_you_ready">Вы готовы к экзаменам?</string>
+    <string name="days">дни</string>
+    <string name="hours">часы</string>
+    <string name="minutes">минуты</string>
+    <string name="homeworks">Домашнее задание</string>
+    <string name="call">Open in</string>
+    <string name="schedule">Расписание</string>
 </resources>

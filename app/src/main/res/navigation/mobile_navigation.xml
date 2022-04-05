@@ -13,8 +13,8 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.kusch.exam.ui.dashboard.MarkersFragment"
-        android:label="@string/title_markers"
+        android:name="com.kusch.exam.ui.dashboard.ScheduleFragment"
+        android:label="@string/lessons"
         tools:layout="@layout/fragment_dashboard" />
 
 </navigation>
